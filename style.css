@@ -354,6 +354,54 @@ footer {
   background: var(--dark-section);
 }
 
+.custom-modal {
+  color: var(--text-main);
+  background: var(--dark-card);
+  border: 1px solid var(--orange-border);
+  border-radius: 18px;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  border-color: var(--orange-border);
+}
+
+.custom-input {
+  color: var(--text-main);
+  background: var(--dark-black);
+  border: 1px solid var(--orange-border);
+}
+
+.custom-input::placeholder {
+  color: var(--text-muted);
+}
+
+.custom-input:focus {
+  color: var(--text-main);
+  background: var(--dark-card-soft);
+  border-color: var(--papaya);
+  box-shadow: 0 0 0 0.2rem var(--orange-medium);
+}
+
+.carousel-box {
+  min-height: 180px;
+  padding: 40px 70px;
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, var(--orange-soft), var(--orange-medium));
+  border: 1px solid var(--orange-border);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--papaya);
+}
+
 /* Animații */
 .floating {
   color: var(--text-main);

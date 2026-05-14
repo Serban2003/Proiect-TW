@@ -126,14 +126,12 @@
           <div class="col-md-4">
             <div class="card-custom">
               <h3>Grid System</h3>
-
               <p>
                 Bootstrap folosește un sistem cu 12 coloane pentru layout-uri
                 responsive. Clase precum <strong>container</strong>,
-                <strong>row</strong> și <strong>col-md-4</strong>
-                ajută la organizarea conținutului.
+                <strong>row</strong> și <strong>col-md-4</strong> ajută la
+                organizarea conținutului.
               </p>
-
               <div class="code-line">container → row → col</div>
             </div>
           </div>
@@ -141,13 +139,11 @@
           <div class="col-md-4">
             <div class="card-custom">
               <h3>Responsive Design</h3>
-
               <p>
-                În Bootstrap, prefixele responsive precum <strong>sm</strong>,
+                Prefixele responsive precum <strong>sm</strong>,
                 <strong>md</strong>, <strong>lg</strong>, <strong>xl</strong> și
-                <strong>xxl</strong> nu se aplică doar la coloane. Ele pot fi
-                folosite și pentru spacing, margini, padding, display, aliniere
-                și alte clase utilitare.
+                <strong>xxl</strong>
+                pot fi folosite pentru coloane, spacing, display și aliniere.
               </p>
 
               <div class="d-flex gap-2 flex-wrap mt-3">
@@ -167,11 +163,9 @@
           <div class="col-md-4">
             <div class="card-custom">
               <h3>Utilities</h3>
-
               <p>
                 Clasele utilitare Bootstrap ajută la stilizarea rapidă a
-                elementelor, fără să fie nevoie să scriem CSS separat pentru
-                fiecare detaliu.
+                elementelor.
               </p>
 
               <div class="d-flex gap-2 flex-wrap mt-3">
@@ -180,13 +174,6 @@
                 <span class="badge custom-badge p-2">text-center</span>
                 <span class="badge custom-badge p-2">p-3</span>
                 <span class="badge custom-badge p-2">m-2</span>
-                <span class="badge custom-badge p-2">mt-4</span>
-                <span class="badge custom-badge p-2">mb-4</span>
-                <span class="badge custom-badge p-2"
-                  >justify-content-center</span
-                >
-                <span class="badge custom-badge p-2">align-items-center</span>
-                <span class="badge custom-badge p-2">fw-bold</span>
                 <span class="badge custom-badge p-2">rounded</span>
                 <span class="badge custom-badge p-2">shadow</span>
               </div>
@@ -201,31 +188,34 @@
             <div class="col-lg-6">
               <ul class="list-group mb-4">
                 <li class="list-group-item">
-                  <strong>Navbar</strong> – meniul de navigare din partea de sus
+                  <strong>Navbar</strong> – meniul de navigare
                 </li>
                 <li class="list-group-item">
-                  <strong>Cards</strong> – fiecare secțiune este organizată în
-                  carduri
+                  <strong>Cards</strong> – organizarea secțiunilor
                 </li>
                 <li class="list-group-item">
-                  <strong>Buttons</strong> – butoane Bootstrap pentru
-                  interacțiune
+                  <strong>Buttons</strong> – butoane interactive
                 </li>
                 <li class="list-group-item">
                   <strong>Alerts</strong> – mesaje informative
                 </li>
                 <li class="list-group-item">
-                  <strong>Badges</strong> – etichete pentru componente
-                </li>
-                <li class="list-group-item">
-                  <strong>Grid System</strong> – layout responsive cu linii și
-                  coloane
+                  <strong>Badges</strong> – etichete vizuale
                 </li>
                 <li class="list-group-item">
                   <strong>Progress Bar</strong> – bară de progres
                 </li>
                 <li class="list-group-item">
-                  <strong>Accordion</strong> – componentă interactivă Bootstrap
+                  <strong>Accordion</strong> – conținut extensibil
+                </li>
+                <li class="list-group-item">
+                  <strong>Modal</strong> – fereastră peste pagină
+                </li>
+                <li class="list-group-item">
+                  <strong>Carousel</strong> – slider interactiv
+                </li>
+                <li class="list-group-item">
+                  <strong>Form</strong> – formular pentru date
                 </li>
               </ul>
             </div>
@@ -239,11 +229,7 @@
                 <button class="btn btn-dark-custom">Dark Button</button>
               </div>
 
-              <div
-                class="progress mb-4"
-                role="progressbar"
-                aria-label="Exemplu progress bar"
-              >
+              <div class="progress mb-4">
                 <div class="progress-bar custom-progress" style="width: 75%">
                   75%
                 </div>
@@ -281,16 +267,133 @@
                   >Rounded Pill</span
                 >
               </div>
+
+              <button
+                type="button"
+                class="btn btn-papaya mt-4"
+                data-bs-toggle="modal"
+                data-bs-target="#bootstrapModal"
+              >
+                Deschide Modal
+              </button>
             </div>
           </div>
 
-          <div class="alert custom-alert mt-4 mb-0">
+          <div class="alert custom-alert mb-0">
             Acest site folosește Bootstrap 5 pentru responsive design și
             componente UI.
           </div>
         </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-6">
+            <div class="card-custom" style="height: auto;">
+              <h3 class="mb-3">Carousel Bootstrap</h3>
+              <p>
+                Carousel-ul este folosit pentru afișarea mai multor elemente
+                într-un slider interactiv.
+              </p>
+
+              <div
+                id="bootstrapCarousel"
+                class="carousel slide mt-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <div class="carousel-box">Slide 1 - Navbar</div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-box">Slide 2 - Cards</div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-box">Slide 3 - Buttons</div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#bootstrapCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#bootstrapCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-custom">
+              <h3 class="mb-3">Form Bootstrap</h3>
+              <p>
+                Form-urile Bootstrap oferă input-uri stilizate și responsive
+                pentru introducerea datelor.
+              </p>
+
+              <form class="mt-4">
+                <div class="mb-3">
+                  <label class="form-label">Nume</label>
+                  <input
+                    type="text"
+                    class="form-control custom-input"
+                    placeholder="Introdu numele"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control custom-input"
+                    placeholder="exemplu@email.com"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Mesaj</label>
+                  <textarea
+                    class="form-control custom-input"
+                    rows="3"
+                    placeholder="Scrie un mesaj..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-papaya">Trimite</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Modal Bootstrap -->
+    <div class="modal fade" id="bootstrapModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h5 class="modal-title">Exemplu Modal Bootstrap</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Modalul este o fereastră afișată peste pagină.
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- CSS avansat -->
     <section id="css">
