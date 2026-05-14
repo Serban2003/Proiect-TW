@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TW | Prezentare</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Stiluri proprii -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navigare -->
+    <nav class="py-3">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center px-4"
+      >
+        <strong class="brand-title"
+          >Proiect Tehnologii Web - Web Development</strong
+        >
+
+        <div class="nav-links">
+          <a href="#intro">Intro</a>
+          <a href="#flexgrid">Flex/Grid</a>
+          <a href="#bootstrap">Bootstrap</a>
+          <a href="#css">CSS</a>
+          <a href="#concluzie">Final</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Introducere -->
+    <section id="intro">
+      <div class="slide">
+        <h1 class="title">
+          Web Development: Flexbox, Grid, Bootstrap și CSS avansat
+        </h1>
+
+        <p class="subtitle">
+          Această prezentare este realizată sub forma unui site interactiv. Pe
+          parcurs sunt demonstrate layout-uri moderne, componente Bootstrap,
+          animații CSS, tooltip-uri pure CSS și un loading spinner.
+        </p>
+
+        <div class="mt-5 floating">
+          <span class="pulse-dot"></span>
+          <strong>Scroll pentru următorul slide</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flexbox și Grid -->
+    <section id="flexgrid">
+      <div class="slide">
+        <span class="tag">1. CSS Layout</span>
+        <h2 class="title">Flexbox și Grid</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card-custom">
+              <h3>Flexbox</h3>
+
+              <p>
+                Flexbox este folosit pentru alinierea elementelor pe o singură
+                direcție: orizontal sau vertical. Este foarte util pentru
+                meniuri, carduri și butoane.
+              </p>
+
+              <div class="demo-flex">
+                <div class="demo-box">1</div>
+                <div class="demo-box">2</div>
+                <div class="demo-box">3</div>
+              </div>
+
+              <div class="code-line">
+                display: flex;<br />
+                justify-content: center;<br />
+                align-items: center;
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-custom">
+              <h3>Grid</h3>
+
+              <p>
+                Grid este folosit pentru layout-uri pe două direcții: rânduri și
+                coloane. Este potrivit pentru pagini complexe și zone de
+                conținut.
+              </p>
+
+              <div class="demo-grid">
+                <div class="grid-item big">Header</div>
+                <div class="grid-item">Card</div>
+                <div class="grid-item">Card</div>
+                <div class="grid-item">Card</div>
+                <div class="grid-item">Card</div>
+              </div>
+
+              <div class="code-line">
+                display: grid;<br />
+                grid-template-columns: repeat(3, 1fr);
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <section id="bootstrap">
+      <div class="slide">
+        <span class="tag">2. Bootstrap</span>
+        <h2 class="title">Grid system și utilities</h2>
+
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <div class="card-custom">
+              <h3>Grid System</h3>
+
+              <p>
+                Bootstrap folosește un sistem cu 12 coloane pentru layout-uri
+                responsive. Clase precum <strong>container</strong>,
+                <strong>row</strong> și <strong>col-md-4</strong>
+                ajută la organizarea conținutului.
+              </p>
+
+              <div class="code-line">container → row → col</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card-custom">
+              <h3>Responsive Design</h3>
+
+              <p>
+                În Bootstrap, prefixele responsive precum <strong>sm</strong>,
+                <strong>md</strong>, <strong>lg</strong>, <strong>xl</strong> și
+                <strong>xxl</strong> nu se aplică doar la coloane. Ele pot fi
+                folosite și pentru spacing, margini, padding, display, aliniere
+                și alte clase utilitare.
+              </p>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="badge custom-badge p-2">sm ≥ 576px</span>
+                <span class="badge custom-badge p-2">md ≥ 768px</span>
+                <span class="badge custom-badge p-2">lg ≥ 992px</span>
+                <span class="badge custom-badge p-2">xl ≥ 1200px</span>
+                <span class="badge custom-badge p-2">xxl ≥ 1400px</span>
+              </div>
+
+              <div class="code-line">
+                col-md-4 | p-lg-5 | mt-sm-3 | d-md-flex
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card-custom">
+              <h3>Utilities</h3>
+
+              <p>
+                Clasele utilitare Bootstrap ajută la stilizarea rapidă a
+                elementelor, fără să fie nevoie să scriem CSS separat pentru
+                fiecare detaliu.
+              </p>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="badge custom-badge p-2">d-flex</span>
+                <span class="badge custom-badge p-2">gap-3</span>
+                <span class="badge custom-badge p-2">text-center</span>
+                <span class="badge custom-badge p-2">p-3</span>
+                <span class="badge custom-badge p-2">m-2</span>
+                <span class="badge custom-badge p-2">mt-4</span>
+                <span class="badge custom-badge p-2">mb-4</span>
+                <span class="badge custom-badge p-2"
+                  >justify-content-center</span
+                >
+                <span class="badge custom-badge p-2">align-items-center</span>
+                <span class="badge custom-badge p-2">fw-bold</span>
+                <span class="badge custom-badge p-2">rounded</span>
+                <span class="badge custom-badge p-2">shadow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-custom mt-4">
+          <h2 class="mb-4">Componente Bootstrap utilizate</h2>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <ul class="list-group mb-4">
+                <li class="list-group-item">
+                  <strong>Navbar</strong> – meniul de navigare din partea de sus
+                </li>
+                <li class="list-group-item">
+                  <strong>Cards</strong> – fiecare secțiune este organizată în
+                  carduri
+                </li>
+                <li class="list-group-item">
+                  <strong>Buttons</strong> – butoane Bootstrap pentru
+                  interacțiune
+                </li>
+                <li class="list-group-item">
+                  <strong>Alerts</strong> – mesaje informative
+                </li>
+                <li class="list-group-item">
+                  <strong>Badges</strong> – etichete pentru componente
+                </li>
+                <li class="list-group-item">
+                  <strong>Grid System</strong> – layout responsive cu linii și
+                  coloane
+                </li>
+                <li class="list-group-item">
+                  <strong>Progress Bar</strong> – bară de progres
+                </li>
+                <li class="list-group-item">
+                  <strong>Accordion</strong> – componentă interactivă Bootstrap
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6">
+              <h4 class="mb-3">Exemple de componente Bootstrap</h4>
+
+              <div class="mb-3 d-flex gap-2 flex-wrap">
+                <button class="btn btn-papaya">Primary Button</button>
+                <button class="btn btn-outline-papaya">Outline Button</button>
+                <button class="btn btn-dark-custom">Dark Button</button>
+              </div>
+
+              <div
+                class="progress mb-4"
+                role="progressbar"
+                aria-label="Exemplu progress bar"
+              >
+                <div class="progress-bar custom-progress" style="width: 75%">
+                  75%
+                </div>
+              </div>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item custom-accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button custom-accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                    >
+                      Ce este Bootstrap?
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body custom-accordion-body">
+                      Bootstrap este un framework CSS utilizat pentru
+                      dezvoltarea rapidă a interfețelor responsive.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <span class="badge rounded-pill custom-badge p-2">Badge</span>
+                <span class="badge rounded-pill custom-badge-dark p-2"
+                  >Rounded Pill</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="alert custom-alert mt-4 mb-0">
+            Acest site folosește Bootstrap 5 pentru responsive design și
+            componente UI.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS avansat -->
+    <section id="css">
+      <div class="slide">
+        <span class="tag">3. Advanced CSS</span>
+        <h2 class="title">Animații, tooltip și loader</h2>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <div class="card-custom">
+              <h3>Hover transitions</h3>
+
+              <p>
+                Cardurile și box-urile se mișcă la hover folosind proprietatea
+                <strong>transform</strong>.
+              </p>
+
+              <div class="demo-box mx-auto mt-4">Hover</div>
+
+              <div class="code-line">
+                .demo-box:hover {<br />
+                &nbsp;&nbsp;transform: scale(1.1) rotate(-2deg);<br />
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card-custom text-center">
+              <h3>CSS Tooltip</h3>
+              <p>Treci cu mouse-ul peste textul de mai jos:</p>
+
+              <p class="mt-4">
+                <span
+                  class="tooltip-css"
+                  data-info="Acesta este un tooltip creat doar cu CSS, folosind ::after și :hover."
+                >
+                  Tooltip pure CSS
+                </span>
+              </p>
+
+              <div class="code-line text-start">
+                .tooltip-css::after {<br />
+                &nbsp;&nbsp;content: attr(data-info);<br />
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card-custom text-center">
+              <h3>Loading spinner</h3>
+
+              <p>
+                Loader-ul este făcut doar din CSS, cu border și animație
+                <strong>keyframes</strong>.
+              </p>
+
+              <div class="loader"></div>
+
+              <div class="code-line text-start">
+                animation: spin 1s linear infinite;
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-custom mt-4">
+          <h3>Exemplu de cod CSS</h3>
+
+          <p>
+            Mai jos este codul pentru animația de rotire folosită la loader.
+          </p>
+
+          <div class="code-line">
+            @keyframes spin {<br />
+            &nbsp;&nbsp;from { transform: rotate(0deg); }<br />
+            &nbsp;&nbsp;to { transform: rotate(360deg); }<br />
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concluzie -->
+    <section id="concluzie">
+      <div class="slide">
+        <span class="tag">Concluzie</span>
+        <h2 class="title">Ce demonstrează acest proiect?</h2>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card-custom">
+              <strong>Flexbox</strong>
+              <p>Aliniere simplă și eficientă a elementelor.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card-custom">
+              <strong>Grid</strong>
+              <p>Structură clară pentru layout-uri complexe.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card-custom">
+              <strong>Bootstrap</strong>
+              <p>Dezvoltare rapidă cu sistem responsive.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card-custom">
+              <strong>CSS avansat</strong>
+              <p>Animații, tooltip-uri și loader modern.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="mt-5">Proiect realizat de Iustinian Șerban.</footer>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
